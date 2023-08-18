@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+
+<div class="stockHeader">
+    <div>
+            <p>Ticker</p>
+            <h1> {{ ticker }}</h1>
+    </div>
+    <div>
+            <p>Company</p>
+            <h2> {{ company }}</h2>
+    </div>
+    <div>
+        <p>Price</p>
+        <h2> {{ price }}</h2>
+    </div>
+</div>
+
+<form class="question" action="/answering" method="post">
+    <input id="ticker" autocomplete="off" class="form-control" name="ticker" value={{ ticker }} type="text">
+        <table>
+            <tbody>
+            {% for question in questions %}
+                <tr class="questionRow">
+                    <td class="question">{{ question["question"] }}</td>
+                    <td class="answer">
+                        <div class="bool">
+                            <label class="switch">
+                                <input type="checkbox" id="answer" name= {{ question["id"] }} value="Sim">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <button class="btn btn-primary" type="submit" style="margin:30px; width: 10rem;">Submit</button>
+</form>
+
+</div>
+
+{% endblock %}

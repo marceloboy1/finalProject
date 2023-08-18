@@ -1,0 +1,35 @@
+# Balance: Keep your risk controlled
+
+### Video demo: https://youtu.be/oWccQIT2hvw
+
+## Description
+
+Balance is a webapp made to control the balancing of your stock portfolio with metrics that you decide yourself, through yes or no questions. Each question receives a weight that the user chooses according to the importance of that metric for him. After selecting which questions will be used to know how safe it is to invest in a company, the user answers the questions for all the stocks in his portfolio, and each stock will receive a score according to the answers.
+
+The system then calculates the weight that each asset should have in the portfolio, respecting the calculated risk. Thus, the portfolio will be optimized so that safer stocks have a larger position in the portfolio, increasing security and profitability, without taking unnecessary risks.
+
+Here are some images of how the system works, remembering that all assets and questions are only for demonstration purposes, and do not characterize an indication of what should or should not be analyzed when buying shares of a company.
+
+
+## Screenshots
+![Screenshot 1: Stock Portfolio](./static/1.png)
+
+![Screenshot 2: Questions](./static/2.png)
+
+![Screenshot 3: Answers](./static/5.png)
+
+![Screenshot 4: Score](./static/3.png)
+
+![Screenshot 5: Ideal Portfolio](./static/4.png)
+
+## Technologies used
+Flask, Python, Bootstrap, Sqlite, HTML and CSS.
+
+## Files and directories
+In the templates directory is all front-end of app while at root directory of application is backend which makes calls to database performs calculations and returns necessary data.
+
+## Next steps
+Now next steps will be porting this app to mobile using React native and Javascript as well as including some other utilities such as financial control other stock exchanges graphs and news."
+
+## Thanks
+This webapp was made as the final project from Harvard´s CS50 course. I like to thank David, Brian and all the CS50 Staff that made this incredible course possible. The quality of the material and amount of knowledge that come with CS50 is incomparable. Gonna miss this. And this was CS50!

@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="stockHeader">
+    <div class="formsContainer">
+        <form class="question" action="/wallet" method="post">
+            <p>Add stocks to your wallet</p>
+            <div class="form-group-question">
+                <input autocomplete="off" autofocus claass="form-control" name="symbol" placeholder="Ticker" type="text">
+                <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Shares" type="number">
+                <button class="btn btn-primary" type="submit">Add Stock</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id = "table-container">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Company</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row["symbol"] }}</td>
+                <td>{{ row["company"] }}</td>
+                <td>{{ row["shares"] }}</td>
+                <td>{{ row["price"] }}</td>
+                <td>{{ row["total"] }}</td>
+                <td>
+                    <form class="question" action="/deleteStock" method="post">
+                    <button type="submit" class="btn btn-danger" name="stock" value="{{ row["symbol"] }}">
+                        <span class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

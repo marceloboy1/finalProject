@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<div class="stockHeader">
+    <div class="formsContainer">
+        <h2>Wallet ballance, acording to your criteria.</h2>
+    </div>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th scope="col">Ticker</th>
+            <th scope="col">Name</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Actual</th>
+            <th scope="col">Ideal</th>
+            <th scope="col">Should I buy?</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row["symbol"] }}</td>
+            <td>{{ row["company"] }}</td>
+            <td>{{ row["shares"] }}</td>
+            <td>{{ row["actualWeight"] }}</td>
+            <td>{{ row["idealWeight"] }}</td>
+            <td>{{ row["todo"] }}</td>
+        </tr>
+        {% endfor %}
+
+</table>
+
+{% endblock %}

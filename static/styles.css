@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+#logoContainer
+{
+    padding:0px;
+    margin:0px;
+    font-family: 'Oswald', sans-serif;
+    color: #ffefd3;
+    display: flex;
+    align-items: strech;
+}
+
+#logoName
+{
+  align-self: strech;
+  padding:0px;
+  margin:0px;
+}
+
+#logoContainer h3
+{
+    padding:0px;
+    margin:0px;
+    font-size: 1rem;
+}
+
+#logoContainer h1
+{
+    padding:0px;
+    margin:0px;
+}
+
+#logo
+{
+    width: 80px;
+}
+
+body
+{
+    color: #FFEFD3;
+    background-color: #294c60;
+}
+
+.stockHeader
+{
+    font-family: 'Oswald', sans-serif;
+    color: #ffefd3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001b2e;
+    padding: 20px;
+    border-radius: 50px 10px 50px 10px;
+}
+
+.formsContainer
+{
+  width: 100%;
+}
+
+table
+{
+    margin-top: 50px;
+    width: 100%;
+    color: #211636;
+    font-weight: bold;
+    background-color: #FFEFD3;
+}
+
+th, td {
+  height: 40px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #adb6c4;
+}
+
+tr:hover {background-color: coral;}
+
+thead
+{
+    color: #211636;
+    background-color: #adb6c4;
+    border-radius: 10px;
+}
+
+.Final
+{
+    color: #211636;
+    background-color: #97A89D;
+}
+
+.Transparent
+{
+    background-color: #211636;
+}
+
+input
+{
+    padding: 10px;
+    margin: 5px;
+    width: 40%;
+    border-radius: 0.25rem;
+}
+
+#question
+{
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+}
+
+#weight
+{
+    width: 10%;
+    margin-right: 10px;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }

@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="stockHeader">
+    <div class="formsContainer">
+        <form class="question" action="/questions" method="post">
+            <p>Add questions to calculate stock risk</p>
+            <div class="form-group-question">
+                <input id="question" autocomplete="off" autofocus class="form-control" name="question" placeholder="Question" type="text">
+                <input id="weight" autocomplete="off" class="form-control" name="weight" placeholder="Weight" type="number">
+                <button class="btn btn-primary" type="submit">Add Question</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id = "table-container">
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Question</th>
+                <th scope="col">Weight</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for question in questions %}
+            <tr>
+                <td>{{ question["question"] }}</td>
+                <td>{{ question["questionWeight"] }}</td>
+                <td>
+                    <form class="question" action="/deleteQuestion" method="post">
+                    <button type="submit" class="btn btn-danger" name="question" value="{{ question["id"] }}">
+                        <span class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

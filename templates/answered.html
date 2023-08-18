@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="stockHeader">
+        <div>
+                <p>Ticker</p>
+                <h1> {{ ticker }}</h1>
+        </div>
+        <div>
+                <p>Company</p>
+                <h2> {{ company }}</h2>
+        </div>
+        <div>
+            <p>Price</p>
+            <h2> {{ price }}</h2>
+        </div>
+    </div>
+    <div id = "table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Question</th>
+                    <th scope="col">Weight</th>
+                    <th scope="col">value</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for question in questions %}
+                <tr>
+                    <td>{{ question["question"] }}</td>
+                    <td>{{ question["weight"] }}</td>
+                    <td>{{ question["answer"] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

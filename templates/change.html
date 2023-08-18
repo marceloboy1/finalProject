@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/change" method="post">
+        <div class="form-group">
+            <input class="form-control" name="lastPassword" placeholder="Last Password" type="password">
+            <input class="form-control" name="password" placeholder="New Password" type="password">
+            <input class="form-control" name="confirmation" placeholder="Re-enter New Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+{% endblock %}
